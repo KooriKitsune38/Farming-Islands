@@ -3,8 +3,12 @@
 # Forceload
 forceload add ~ ~ ~ ~
 
+# Kill other spawn
+kill @e[type=marker,tag=kfi.Spawn]
+
 # Summon
 execute align xyz run summon marker ~.5 ~.5 ~.5 {Tags:[kfi.Spawn]}
+execute rotated as @s as @e[type=marker,tag=kfi.Spawn] positioned as @s run tp @s ~ ~ ~ ~ ~
 
 # Tellraw
 tellraw @s ""
