@@ -5,7 +5,9 @@ execute unless entity @s[tag=kfi.HasIsland] run tellraw @s [{"text":"| ","color"
 
 # Set values
 execute store result storage kfi:values tempPos.x int 1 run scoreboard players get @s kfi.x
-execute store result storage kfi:values tempPos.y int 1 run scoreboard players get @s kfi.y
+scoreboard players operation .tempY k.Values = @s kfi.y
+scoreboard players operation .tempY k.Values += .1 k.Values
+execute store result storage kfi:values tempPos.y int 1 run scoreboard players get .tempY k.Values
 execute store result storage kfi:values tempPos.z int 1 run scoreboard players get @s kfi.z
 
 # Tp

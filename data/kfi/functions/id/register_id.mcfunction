@@ -10,6 +10,4 @@
 scoreboard players operation @s kfi.IDs = @s my_id
 
 # Tellraw
-tellraw @s ""
 tellraw @s [{"text":"| ","color":"gray"},{"text":"Your ID has been registered as: ","color":"gold"},{"score":{"name": "@s","objective": "kfi.IDs"},"color":"#DAA06D"}]
-tellraw @s ""

@@ -10,6 +10,4 @@
 scoreboard players reset @s kfi.IDs
 
 # Tellraw
-tellraw @s ""
 tellraw @s [{"text":"| ","color":"gray"},{"text":"Your ID has been unregistered.","color":"gold"}]
-tellraw @s ""

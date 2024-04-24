@@ -29,4 +29,3 @@ forceload remove ~ ~ ~ ~
 # Tellraw
 tellraw @s ""
 tellraw @s [{"text":"| ","color":"gray"},{"text": "Island Generated, Enjoy!","color":"gold"}]
-tellraw @s ""
