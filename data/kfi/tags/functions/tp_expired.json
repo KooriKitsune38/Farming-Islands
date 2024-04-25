@@ -1,0 +1,6 @@
+{
+    "values": [
+        "kfi:tp/reset_tp",
+        "kfi:tp/expired_tellraw"
+    ]
+}

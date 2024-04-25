@@ -7,5 +7,5 @@ function kfi:generation/get_coords
 spawnpoint @s ~ ~ ~
 
 # Tellraw
-tellraw @s ""
+
 tellraw @s [{"text":"| ","color":"gray"},{"color":"gold","text":"Home Set"}]

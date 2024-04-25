@@ -1,7 +1,7 @@
 #> kfi:generation/summon_generator
 
 # Tellraw
-tellraw @s ""
+
 tellraw @s [{"text":"| ","color":"gray"},{"text": "Summoning Generator. (Please retry in a second)","color":"red"}]
 
 # Forceload

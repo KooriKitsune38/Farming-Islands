@@ -14,5 +14,5 @@ execute rotated as @s as @e[type=marker,tag=kfi.Spawn] positioned as @s run tp @
 execute at @s run function kfi:generation/spawn_coords
 
 # Tellraw
-tellraw @s ""
+
 tellraw @a [{"text":"| ","color":"gray"},{"text":"Spawn Set ","color":"gold"}]

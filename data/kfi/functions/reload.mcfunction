@@ -6,12 +6,15 @@
     scoreboard objectives add spawn trigger
     scoreboard objectives add home trigger
     scoreboard objectives add sethome trigger
+    scoreboard objectives add tp trigger
     scoreboard objectives add generate_island trigger
     scoreboard objectives add kfi.IDs dummy
     scoreboard objectives add kfi.x dummy
     scoreboard objectives add kfi.y dummy
     scoreboard objectives add kfi.z dummy
     scoreboard objectives add kfi.IslandUUIDs dummy
+    scoreboard objectives add kfi.teleportTimer dummy
+    scoreboard objectives add kfi.teleportUUID dummy
     scoreboard objectives add k.Values dummy
     #> Players
     scoreboard players set .1 k.Values 1
