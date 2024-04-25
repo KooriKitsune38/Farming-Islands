@@ -17,4 +17,10 @@
     scoreboard players set .1 k.Values 1
 
 # Storages
-execute unless data storage kfi:values registeredIDs run data merge storage kfi:values {registeredIDs:[{id:0}],tempData:{id:0},tempID:0,tempPos:{x:0,y:0,z:0}}
+execute unless data storage kfi:values registeredIDs run data merge storage kfi:values {registeredIDs:[{id:0}],tempData:{id:0},tempID:0,tempPos:{x:0,y:0,z:0},generatorPos:{x:0,y:0,z:0},spawnPos:{x:0,y:0,z:0}}
+
+# Forceload chunks
+    #> Generator
+    function kfi:generation/forceload_chunks with storage kfi:values generatorPos
+    #> Spawn
+    function kfi:generation/forceload_chunks with storage kfi:values spawnPos
