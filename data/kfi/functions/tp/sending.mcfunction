@@ -7,7 +7,7 @@ execute store result score .tempUUID kfi.teleportUUID run data get entity @s UUI
 tag @s add .temp
 execute as @a[tag=!.temp] at @s if score @s kfi.IDs = .tempID k.Values run function kfi:tp/receiver_availability
 tag @s remove .temp
-execute if score .success k.Values matches 1 store result score .tempUUID kfi.teleportUUID run data get entity @s UUID[0]
+execute if score .success k.Values matches 1 store result score @s kfi.teleportUUID run data get entity @s UUID[0]
 
 # Receiver
     #> No Player
