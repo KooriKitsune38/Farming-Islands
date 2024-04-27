@@ -5,8 +5,10 @@ $tp $(x) $(y) $(z)
 
 $execute at @s run spreadplayers ~ ~ 0 1 under $(y) false @s
 
-# Tellraw
+# Spawnpoint
+execute at @s run spawnpoint @s ~ ~ ~
 
+# Tellraw
 tellraw @s [{"text":"| ","color":"gray"},{"color":"aqua","text":"Welcome Aboard Captain."}]
 
 # Gamemode survival

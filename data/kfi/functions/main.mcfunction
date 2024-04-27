@@ -12,6 +12,9 @@ scoreboard players enable @a tp
 
 scoreboard players enable @a[tag=!kfi.HasIsland] generate_island
 
+# Skeletons
+execute if score .customSkeletons k.Values matches 1 as @e[type=skeleton] run data modify entity @s DeathLootTable set value "kf:skeletons"
+
 # Teleport Timer
 execute as @a if score @s kfi.teleportTimer matches 0.. run function kfi:tp/timer
 

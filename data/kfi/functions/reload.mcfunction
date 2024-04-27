@@ -18,6 +18,7 @@
     scoreboard objectives add k.Values dummy
     #> Players
     scoreboard players set .1 k.Values 1
+    scoreboard players add .customSkeletons k.Values 0
 
 # Storages
 execute unless data storage kfi:values registeredIDs run data merge storage kfi:values {registeredIDs:[{id:0}],tempData:{id:0},tempID:0,tempPos:{x:0,y:0,z:0},generatorPos:{x:0,y:0,z:0},spawnPos:{x:0,y:0,z:0}}
