@@ -1,9 +1,12 @@
 #> kfi:tp/accept_tp
 
+# Check Island
+function kfi:home/check_island
+
 # Tp Player
 scoreboard players operation .tempUUID kfi.teleportUUID = @s kfi.teleportUUID
 tag @s add .temp
-execute as @a[tag=!.temp] if score @s kfi.teleportUUID = .tempUUID kfi.teleportUUID run function kfi:tp/teleport
+execute if score .success k.Values matches 1 as @a[tag=!.temp] if score @s kfi.teleportUUID = .tempUUID kfi.teleportUUID run function kfi:tp/teleport
 tag @s remove .temp
 
 # Tellraw
