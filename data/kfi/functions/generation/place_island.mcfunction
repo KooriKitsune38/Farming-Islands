@@ -24,8 +24,7 @@ execute summon marker run function kfi:generation/register_island
 execute as @e[type=marker,tag=kfi.Generator] at @s run function kfi:generation/forceload
 
 # Unload chunk
-forceload remove ~ ~ ~ ~
+forceload remove ~-10 ~-10 ~10 ~10
 
 # Tellraw
-
 tellraw @s [{"text":"| ","color":"gray"},{"text": "Island Generated, Enjoy!","color":"gold"}]

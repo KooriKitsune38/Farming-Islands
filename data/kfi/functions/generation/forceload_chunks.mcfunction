@@ -1,4 +1,4 @@
 #> kfi:generation/forceload_chunks
 
 # Forceload
-$forceload add $(x) $(z) $(x) $(z)
+$execute positioned $(x) 60 $(z) forceload add ~-10 ~-10 ~10 ~10

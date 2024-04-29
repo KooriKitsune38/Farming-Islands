@@ -15,7 +15,7 @@ execute if score .z k.Values matches 50000.. run forceload add -50000 ~5000
 execute if score .z k.Values matches 50000.. run tag @s add kfi.NewRow
 
 # Unload
-forceload remove ~ ~ ~ ~
+forceload remove ~-10 ~-10 ~10 ~10
 
 # Get Coords
 execute at @s run function kfi:generation/generator_coords

@@ -1,10 +1,10 @@
 #> kfi:generation/summon_spawn
 
-# Forceload
-forceload add ~ ~ ~ ~
+# Kill
+execute as @e[type=marker,tag=kfi.Spawn] at @s run function kfi:generation/kill_spawn
 
-# Kill other spawn
-kill @e[type=marker,tag=kfi.Spawn]
+# Forceload
+forceload add ~-10 ~-10 ~10 ~10
 
 # Summon
 execute align xyz run summon marker ~.5 ~.5 ~.5 {Tags:[kfi.Spawn]}
