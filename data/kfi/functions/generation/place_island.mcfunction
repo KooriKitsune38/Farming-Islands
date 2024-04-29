@@ -11,7 +11,7 @@
     spawnpoint @s ~ ~ ~
 
 # Copy location
-execute at @s run function kfi:generation/get_coords
+execute at @s run function kfi:home/set_home
 
 # place structure
 place template kfi:island ~-3 ~-5 ~-3

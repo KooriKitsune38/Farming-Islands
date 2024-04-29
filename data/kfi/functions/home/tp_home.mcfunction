@@ -3,8 +3,6 @@
 # Tp
 $tp $(x) $(y) $(z)
 
-$execute at @s run spreadplayers ~ ~ 0 1 under $(y) false @s
-
 # Spawnpoint
 execute at @s run spawnpoint @s ~ ~ ~
 

@@ -1,4 +1,4 @@
-#> kfi:tp/busy_receiver
+#> kfi:coop/busy_receiver
 
 # Scoreboard
 scoreboard players set .success k.Values 2

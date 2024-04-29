@@ -10,6 +10,8 @@ scoreboard players enable @a sethome
 
 scoreboard players enable @a tp
 
+scoreboard players enable @a coop
+
 scoreboard players enable @a[tag=!kfi.HasIsland] generate_island
 
 # Skeletons
