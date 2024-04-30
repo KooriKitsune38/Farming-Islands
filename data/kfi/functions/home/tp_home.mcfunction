@@ -11,3 +11,6 @@ tellraw @s [{"text":"| ","color":"gray"},{"color":"aqua","text":"Welcome Aboard 
 
 # Gamemode survival
 gamemode survival @s[gamemode=!creative]
+
+# If air, levitation
+execute at @s if block ~ ~-1 ~ air run effect give @s levitation 3 0 true

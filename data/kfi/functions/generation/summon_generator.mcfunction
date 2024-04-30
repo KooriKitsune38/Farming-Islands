@@ -1,7 +1,9 @@
 #> kfi:generation/summon_generator
 
-# Tellraw
+# Scoreboard
+scoreboard players set .generatorSummoned kfi.IslandUUIDs 1
 
+# Tellraw
 tellraw @s [{"text":"| ","color":"gray"},{"text": "Summoning Generator. (Please retry in a second)","color":"red"}]
 
 # Forceload
