@@ -4,7 +4,7 @@
 $tp $(x) $(y) $(z)
 
 # Spawnpoint
-execute at @s run spawnpoint @s ~ ~ ~
+execute unless score .noSpawnPoint home matches 1 at @s run spawnpoint @s ~ ~ ~
 
 # Tellraw
 tellraw @s [{"text":"| ","color":"gray"},{"color":"aqua","text":"Welcome Aboard Captain."}]

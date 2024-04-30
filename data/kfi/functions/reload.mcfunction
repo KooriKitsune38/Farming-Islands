@@ -21,7 +21,7 @@
     scoreboard players add .customSkeletons k.Values 0
 
 # Storages
-execute unless data storage kfi:values registeredIDs run data merge storage kfi:values {registeredIDs:[{id:0}],tempData:{id:0},tempUUID:0,tempID:0,tempPos:{x:0,y:0,z:0},generatorPos:{x:0,y:0,z:0},spawnPos:{x:0,y:0,z:0},players:[]}
+execute unless data storage kfi:values registeredIDs run data merge storage kfi:values {registeredIDs:[{id:0}],tempData:{id:0},tempUUID:0,tempID:0,tempPos:{x:0,y:0,z:0},generatorPos:{x:0,y:0,z:0},spawnPos:{x:0,y:0,z:0},tempCoop:{},players:[]}
 
 # Forceload chunks
     #> Generator
