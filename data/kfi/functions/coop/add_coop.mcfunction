@@ -1,25 +1,37 @@
 #> kfi:coop/add_coop
 
-## Sender Side
+## As sender
+data modify storage kfi:values tempUUID set from entity @s UUID[0]
 
 # Append data
 ## Sender
-    ## Set Template
-    data modify storage kfi:values tempPlayer set value {Name:"",UUID:0,homePos:{x:0,y:0,z:0}}
-    ## Retrieve UUID from Recevier
-    execute store result storage kfi:values receiverUUID int 1 run data modify storage kfi:values tempPlayer.UUID set from entity @p[tag=.temp] UUID[0]
-    ## Retrive Home from Receiver
-    function kfi:coop/receiver_home with storage kfi:values
-    ## Set Sender Coop Island
-    $data modify storage kfi:values players[{UUID:$(tempUUID)}].coopIslands append from storage kfi:values tempPlayer
+
+    ## Receiver Template
+        ## Create Template
+        data modify storage kfi:values coopTemplate set value {UUID:0,Name:""}
+        ## Set Sender UUID
+        data modify storage kfi:values coopTemplate.UUID set from entity @s UUID[0]
+
+    ## General Template
+        ## Set Template
+        data modify storage kfi:values tempPlayer set value {Name:"",UUID:0,homePos:{x:0,y:0,z:0}}
+        ## Set UUID
+        data modify storage kfi:values tempPlayer.UUID set from storage kfi:values receiverUUID
+        ## Retrive Home
+        $data modify storage kfi:values tempPlayer.homePos set from storage kfi:values players[{UUID:$(receiverUUID)}].homePos
+        ## Retrieve Name
+        $data modify storage kfi:values tempPlayer.Name set from storage kfi:values players[{UUID:$(receiverUUID)}].Name
+        ## Set Sender Data
+        function kfi:coop/set_sender with storage kfi:values
+
 ## Receiver
-    ## Create Template
-    data modify storage kfi:values coopTemplate set value {UUID:0,Name:""}
-    ## Set Sender UUID
-    data modify storage kfi:values coopTemplate.UUID set from entity @s UUID[0]
-    ## Set Sender Name
-    $data modify storage kfi:values coopTemplate.Name set from storage kfi:values players[{UUID:$(tempUUID)}].Name
     ## Append Sender Template
     data modify storage kfi:values tempPlayer.players append from storage kfi:values coopTemplate
     ## Set coopIslands to Receiver
     $data modify storage kfi:values players[{UUID:$(receiverUUID)}].coopIslands append from storage kfi:values tempPlayer
+
+## Sender Side
+scoreboard players reset @s kfi.coopUUID
+scoreboard players reset @s kfi.coopTimer
+tag @s remove kfi.coopSender
+tellraw @s [{"text":"| ","color":"gray"},{"color":"light_purple","text":"You are now cooperating!"}]
