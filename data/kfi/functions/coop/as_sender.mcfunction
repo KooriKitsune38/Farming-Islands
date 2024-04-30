@@ -7,4 +7,4 @@ scoreboard players set @s kfi.coopTimer 2400
 tag @s add kfi.coopSender
 
 # Tellraw
-tellraw @s [{"text":"| ","color":"gray"},{"text":"Teleport coop sent.","color":"gold"}]
+tellraw @s [{"text":"| ","color":"gray"},{"text":"Coop request sent.","color":"gold"}]

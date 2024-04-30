@@ -1,5 +1,8 @@
 #> kfi:id/register_id
 
+# If player doesn't exist, add it
+$execute unless data storage kfi:values players[{UUID:$(tempUUID)}] run function kfi:home/register_player
+
 # Append to ids
     #> Create a temp data
     execute store result storage kfi:values tempData.id int 1 run scoreboard players get @s my_id

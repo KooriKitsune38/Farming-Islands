@@ -6,7 +6,7 @@
     #> If sender with already a request
     execute if score @s tp matches 1.. if entity @s[tag=kfi.tpSender] run tellraw @s [{"text":"| ","color":"gray"},{"color":"light_purple","text":"You already have a pending request! type /trigger tp set -1 to cancel it!"}]
     #> If Receiver with request
-    execute unless score .success k.Values matches 2 if score @s tp matches 1.. if entity @s[tag=!kfi.tpSender] if score @s kfi.teleportUUID matches -2147483648..2147483647 run tellraw @s [{"text":"| ","color":"gray"},{"color":"light_purple","text":"You already have a pending request! type /trigger tp set -1 to cancel it!"}]
+    execute unless score .success k.Values matches 2 if score @s tp matches 1.. if entity @s[tag=!kfi.tpSender] if score @s kfi.teleportUUID matches -2147483648..2147483647 run tellraw @s [{"text":"| ","color":"gray"},{"color":"light_purple","text":"You already have a pending request! type /trigger tp set -3 to cancel it!"}]
 
 # Check type
     #> Receiving

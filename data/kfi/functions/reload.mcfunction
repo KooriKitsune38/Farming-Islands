@@ -8,6 +8,7 @@
     scoreboard objectives add sethome trigger
     scoreboard objectives add tp trigger
     scoreboard objectives add coop trigger
+    scoreboard objectives add remove_coop trigger
     scoreboard objectives add generate_island trigger
     scoreboard objectives add kfi.IDs dummy
     scoreboard objectives add kfi.IslandUUIDs dummy
@@ -21,7 +22,7 @@
     scoreboard players add .customSkeletons k.Values 0
 
 # Storages
-execute unless data storage kfi:values registeredIDs run data merge storage kfi:values {registeredIDs:[{id:0}],tempData:{id:0},tempUUID:0,tempID:0,tempPos:{x:0,y:0,z:0},generatorPos:{x:0,y:0,z:0},spawnPos:{x:0,y:0,z:0},tempCoop:{},players:[]}
+execute unless data storage kfi:values registeredIDs run data merge storage kfi:values {registeredIDs:[{id:0}],tempData:{id:0},tempUUID:0,tempID:0,tempPos:{x:0,y:0,z:0},generatorPos:{x:0,y:0,z:0},spawnPos:{x:0,y:0,z:0},tempCoop:{},players:[],coopIslands:[]}
 
 # Forceload chunks
     #> Generator
