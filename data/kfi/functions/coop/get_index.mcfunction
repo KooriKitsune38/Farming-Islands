@@ -1,5 +1,10 @@
 #> kfi:coop/get_index
 
+# Retrieve all coop islands
+$data remove storage kfi:values players[{UUID:$(tempUUID)}].coopIslands
+function kfi:coop/retrieve_islands with storage kfi:values
+data remove storage kfi:values tempIslands
+
 # Scoreboard
     #> Set -1
     scoreboard players set .1 home 1
