@@ -27,9 +27,12 @@ data modify storage kfi:values tempUUID set from entity @s UUID[0]
 execute unless score .alreadyCollaborator coop matches 1 run tellraw @s [{"text":"| ","color":"gray"},{"color":"light_purple","text":"You are now cooperating!"}]
 
 ## Receiver
+    # Check if data exists
+    $execute store result score .success k.Values if data storage kfi:values coopIslands[{UUID:$(ownerUUID)}]
     ## Set coopIslands to Receiver
-    data modify storage kfi:values coopIslands append from storage kfi:values tempIsland
-    
+    execute unless score .success k.Values matches 1 run data modify storage kfi:values coopIslands append from storage kfi:values tempIsland
+    $execute if score .success k.Values matches 1 run data modify storage kfi:values coopIslands[{UUID:$(ownerUUID)}].players set from storage kfi:values tempIsland.players
+
 # Remove TempIsland
 data remove storage kfi:values tempIsland
 data remove storage kfi:values tempPlayer

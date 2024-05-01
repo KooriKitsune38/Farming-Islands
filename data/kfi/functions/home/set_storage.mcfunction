@@ -17,4 +17,4 @@ execute if score .success k.Values matches 1 run return 1
     $execute store result storage kfi:values players[{UUID:$(tempUUID)}].homePos.z double 0.1 run data get entity @s Pos[2] 10
 
 # Set to collab island
-$data modify storage kfi:values coopIslands[{UUID:$(tempUUID)}].homePos set from storage kfi:values players[{UUID:$(tempUUID)}].homePos
+$execute if data storage kfi:values coopIslands[{UUID:$(tempUUID)}] run data modify storage kfi:values coopIslands[{UUID:$(tempUUID)}].homePos set from storage kfi:values players[{UUID:$(tempUUID)}].homePos
