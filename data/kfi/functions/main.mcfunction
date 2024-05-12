@@ -6,7 +6,7 @@
     #> Island
     execute as @e[type=marker,tag=kfi.Island] at @s run function kfi:islands/_main
     #> Water Springs
-    execute at @e[type=marker,tag=kfi.WaterSpring] as @a[distance=..20,nbt=!{Inventory:[{id:"minecraft:water_bucket"}]},nbt={Inventory:[{id:"minecraft:bucket"}]}] run function kfi:refill_bucket
+    execute at @e[type=marker,tag=kfi.WaterSpring] as @a[distance=..20,nbt=!{Inventory:[{id:"minecraft:water_bucket"}]},nbt={Inventory:[{id:"minecraft:bucket"}]},predicate=kfi:in_water] run function kfi:refill_bucket
 
 # Skeletons
 execute if score .customSkeletons k.Values matches 1 as @e[type=skeleton] run data modify entity @s DeathLootTable set value "kf:skeletons"
