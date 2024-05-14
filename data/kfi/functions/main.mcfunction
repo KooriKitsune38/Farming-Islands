@@ -3,6 +3,8 @@
 # Selectors
     #> Everyone
     execute as @a run function kfi:selectors/_everyone
+    #> Portal
+    execute as @e[type=marker,tag=kfi.PortalMarker] at @s run function kfi:portals/_main
     #> Island
     execute as @e[type=marker,tag=kfi.Island] at @s run function kfi:islands/_main
     #> Water Springs
