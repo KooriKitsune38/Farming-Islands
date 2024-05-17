@@ -4,7 +4,7 @@
 $tp @s $(x) $(y) $(z)
 
 # Tellraw
-$tellraw @s [{"text":"| "},{"text":"Consumed ","color":"red"},{"text":"$(requiredTickets)","color":"white"},{"text":" Ticket/s.","color":"red"}]
+execute if score .portalTickets k.Values matches 1.. run tellraw @s [{"text":"| "},{"text":"Consumed ","color":"red"},{"score":{"name":".portalTickets","objective":"k.Values"},"color":"white"},{"text":" Ticket/s.","color":"red"}]
 
 # Playsound
 execute at @s run playsound block.portal.travel player @a ~ ~ ~ 1 2
