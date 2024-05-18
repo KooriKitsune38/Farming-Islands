@@ -8,10 +8,13 @@ data remove storage kfi:values tempIslands
 # Scoreboard
     #> Set -1
     scoreboard players set .1 home 1
+    scoreboard players set .-1 home -1
     #> Copy home into index
     scoreboard players operation .index home = @s home
-    #> Add -1 to index
+    #> Add 1 to index
     scoreboard players operation .index home += .1 home
+    scoreboard players operation .index home *= .-1 home
+
 
 # Copy index into tempIndex
 execute store result storage kfi:values tempIndex int 1 run scoreboard players get .index home
