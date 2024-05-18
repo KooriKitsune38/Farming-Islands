@@ -12,7 +12,7 @@
     #> Sending
     execute if score @s coop matches 1.. unless score @s kfi.coopTimer matches 0.. unless score @s kfi.teleportUUID matches -2147483648..2147483647 if score @s kfi.IDs matches -2147483648..2147483647 run function kfi:coop/sending
     #> No Island Error
-    execute unless score @s coop matches ..-1 unless entity @s[tag=kfi.coopSender,tag=kfi.HasIsland] run tellraw @s [{"text":"| ","color":"gray"},{"color":"red","text":"You don't have an island!"}]
+    execute if score @s coop matches ..-1 unless entity @s[tag=kfi.coopSender,tag=kfi.HasIsland] run tellraw @s [{"text":"| ","color":"gray"},{"color":"red","text":"You don't have an island!"}]
     #> Receiving
     execute if score @s coop matches ..-1 if score @s kfi.coopUUID matches -2147483648..2147483647 run function kfi:coop/receiving
 
