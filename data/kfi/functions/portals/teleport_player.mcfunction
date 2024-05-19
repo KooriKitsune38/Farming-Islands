@@ -1,7 +1,7 @@
 #> kfi:portals/teleport_player
 
 # Teleport
-$tp @s $(x) $(y) $(z)
+$tp @s $(x) $(y) $(z) $(x_rotation) $(y_rotation)
 
 # Tellraw
 execute if score .portalTickets k.Values matches 1.. run tellraw @s [{"text":"| "},{"text":"Consumed ","color":"red"},{"score":{"name":".portalTickets","objective":"k.Values"},"color":"white"},{"text":" Ticket/s.","color":"red"}]
