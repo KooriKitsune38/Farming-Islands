@@ -11,4 +11,4 @@ execute at @s run playsound block.portal.travel player @a ~ ~ ~ 0.2 2
 execute at @s run particle cloud ~ ~2 ~ .2 .2 .2 0.15 10 normal
 
 # Remove ticket
-$clear @s name_tag{kfi.PortalTicket:1b} $(requiredTickets)
+$clear @s name_tag[minecraft:custom_data~{kfi.PortalTicket:true}] $(requiredTickets)
