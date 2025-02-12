@@ -20,7 +20,7 @@
     #> Players
     scoreboard players set .1 k.Values 1
     scoreboard players add .customSkeletons k.Values 0
-    scoreboard players set .islandsDistance k.Values 5000
+    scoreboard players set .islandsDistance k.Values 3000
 
 # Storages
 execute unless data storage kfi:values registeredIDs run data merge storage kfi:values {registeredIDs:[{id:0}],tempData:{id:0},tempUUID:0,tempID:0,tempPos:{x:0,y:0,z:0},generatorPos:{x:-50000,y:64,z:-50000},spawnPos:{x:0,y:0,z:0},tempCoop:{},players:[],coopIslands:[]}

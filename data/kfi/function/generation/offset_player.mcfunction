@@ -24,4 +24,4 @@ execute summon marker run function kfi:generation/register_island
 scoreboard players set .noGeneration kfi.IslandUUIDs 1
 
 # Schedule
-schedule function kfi:generation/get_player_position 10t replace
+schedule function kfi:generation/get_player_position 18t replace
