@@ -5,9 +5,9 @@
             "condition": "location_check",
             "predicate": {
                 "block": {
-                    "tag":"slabs",
+                    "blocks":"#minecraft:slabs",
                     "state":{
-                        "waterlogged":true
+                        "waterlogged":"true"
                     }
                 }
             }

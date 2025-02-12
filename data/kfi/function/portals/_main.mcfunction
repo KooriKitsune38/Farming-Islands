@@ -4,7 +4,7 @@
 data modify entity @s Rotation set from entity @e[type=block_display,distance=..1,tag=kfi.PortalDisplay,limit=1,sort=nearest] Rotation
 
 # Particles
-particle end_rod ~ ~ ~ 1.5 1.5 1.5 0 1 normal 
+particle end_rod ~ ~ ~ 1.5 1.5 1.5 0 1 normal
 
 # Retrieve Tickets
 execute store result score .portalTickets k.Values run data get entity @s data.portalLocation.requiredTickets

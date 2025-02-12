@@ -1,0 +1,32 @@
+{
+  "type": "empty",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "name_tag",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_name": "{\"text\":\"Portal Ticket\",\"italic\":false}",
+                "minecraft:lore": [
+                  "{\"text\":\"Grants Access to portals\",\"italic\":false}"
+                ],
+                "minecraft:custom_data": {
+                  "kfi.PortalTicket": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

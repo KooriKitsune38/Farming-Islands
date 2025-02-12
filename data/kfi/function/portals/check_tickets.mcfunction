@@ -2,7 +2,7 @@
 
 # Check
     #> Player
-    execute store result score .playerTickets k.Values run clear @s name_tag{kfi.PortalTicket:1b} 0
+    execute store result score .playerTickets k.Values run clear @s name_tag[custom_data~{kfi.PortalTicket:true}] 0
     #> Check
     execute store result score .success k.Values if score .playerTickets k.Values >= .portalTickets k.Values
 
